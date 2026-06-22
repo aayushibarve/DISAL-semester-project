@@ -27,9 +27,9 @@ from scipy.sparse.linalg import lsqr as sp_lsqr
 CAM_A          = 0
 CAM_B          = 10
 GLOBAL_K       = 3
-IMAGE_FILES    = '/home/aayushi/Documents/Lepton/turntable/proc'
-POSES_PKL      = 'camera_poses.pkl'
-CAM_PARAMS_NPZ = 'camera_params.npz'
+IMAGE_FILES    = './datasets/turntable/proc'
+POSES_PKL      = './approximate_camera_poses/camera_poses.pkl'
+CAM_PARAMS_NPZ = './automated_calibration/camera_params.npz'
 
 
 # I/O
