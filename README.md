@@ -53,6 +53,7 @@ thermal-multiview/
 │   └── temperature_monitoring.ino  # Arduino sketch for thermal reference monitoring
 │
 ├── dense_recon.ipynb             # Dense reconstruction (plane-sweep stereo + voxel carving)
+├── global_vs_inc.py             # Comparing global vs incremental SfM to generate csv with pairwise rotation and translation estimation errors compared to ground truth
 ├── sparse_recon.py               # Incremental SfM pipeline (SIFT + Essential Matrix + PnP)
 └── visualize_ply.py              # Point cloud visualization utility
 ```
@@ -96,6 +97,12 @@ Pairs are evaluated on precision and recall using geometric consistency (RANSAC 
 - Triangulation with cheirality check
 
 A controlled kettle turntable dataset (full 360° rotation, fixed camera) provides approximate ground-truth poses for quantitative evaluation.
+
+
+### 3. Comparison of Global vs Incremental SfM
+
+Using the approximate ground truth, the results of incremental and global SfM (rotations and translations averaged in world frame over multiple viewpoints) are compared. 
+
 
 ### 4. Dense Reconstruction
 
