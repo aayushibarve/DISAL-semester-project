@@ -3,7 +3,7 @@ import numpy as np
 import glob
 import os
 
-IMAGE_FOLDER   = "/home/aayushi/Documents/Lepton/chessboard" #Change depending on device
+IMAGE_FOLDER   = "./datasets/chessboard" #Change depending on device
 IMAGE_GLOB     = "*.tiff"
 SQUARE_SIZE_MM = 20
 BOARD_COLS     = 4
