@@ -18,7 +18,15 @@ K = np.array([[F,  0, CX],
               [0,  F, CY],
               [0,  0,  1]], dtype=np.float64)
 
- 
+def load_calibration(npz_path="./automated_calibration/camera_params.npz"):
+    cal  = np.load(npz_path)
+    K    = cal['K'].astype(np.float64)
+    dist = cal['dist'].astype(np.float64)
+    return K, dist
+  
+# Uncomment if trying with thermal imgs. The above code is for the dino images
+# K, dist = load_calibration()
+
 # 2.  LOAD IMAGES
  
 
@@ -452,7 +460,7 @@ def plot_trajectory(cam_centres_dict, path="camera_trajectory.png"):
  
 
 def main():
-    paths, bgr_imgs, gray_imgs = load_images("/home/aayushi/Documents/Lepton/turntable/proc")
+    paths, bgr_imgs, gray_imgs = load_images("./datasets/turntable/proc")
     #paths, bgr_imgs, gray_imgs = load_images("/home/aayushi/semester-project/dino_imgs")
     N = len(gray_imgs)
 
