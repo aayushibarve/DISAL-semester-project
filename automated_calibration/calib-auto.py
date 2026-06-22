@@ -4,7 +4,7 @@ import glob
 
 #This code is for the cardboard mask
 
-folder = "/home/aayushi/Documents/Lepton/capture_march_20" #Chnage based on device
+folder = "./datasets/capture_march_20" #Chnage based on device
 THRESH = 200 #Tune this to make sure 16 (or however many) blobs are detected
 rows, cols = 4, 4 #Change based on the grid you use
 spacing = 200/7      # mm
